@@ -93,7 +93,7 @@ public class TestBmob1 : MonoBehaviour
     {
         MyGameTable mg = new MyGameTable();
 
-        Bmob.Get<MyGameTable>(MyGameTable.TABLENAME, "674dcc697d", (resp, exception) =>
+        Bmob.Get<MyGameTable>(MyGameTable.TABLENAME, "cJdo1118", (resp, exception) =>
         {
             if (exception != null)
             {
@@ -102,7 +102,7 @@ public class TestBmob1 : MonoBehaviour
             }
 
             MyGameTable game = resp;
-            Debug.Log("playerName:"+game.playername + "\n"+"Score:" + game.score );
+            Debug.Log("playerName:"+game.playername + "\t"+"Score:" + game.score +" "+ resp.createdAt);
         });
     }
     /// <summary>
